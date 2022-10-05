@@ -1,0 +1,48 @@
+@import '../../global/mixins';
+@import '../../global/colors';
+@import '../../global/fonts';
+
+header{
+    background-color: $header-background-color;
+    width: 100%;
+    font-family: $header-font;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+  
+  
+}
+
+.Header{
+    @include flex(row, nowrap, space-between, center);
+    max-width: 1200px;
+    height: 100px;
+    margin: auto;
+    padding: 0 20px;
+   
+
+    &__content{
+        @include flex(row, nowrap, center, center);
+        width: 60%;
+        gap:10%;
+        position: relative;
+    }
+}
+
+
+
+  @media screen and (max-width: 1024px) {
+    .Header__content{
+        gap:10%;
+        width: 60%;
+     
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .Header__content{
+        @include flex(row, nowrap, center, center);
+        gap:10%;
+        width: 50%;
+    }
+  }

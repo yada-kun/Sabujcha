@@ -1,0 +1,54 @@
+@import "../../global/mixins";
+@import "../../global/colors";
+@import "../../global/fonts";
+
+.HomeSale {
+  @include flex(row, wrap, center, center);
+  padding: 5% 10%;
+  gap: 1%;
+  overflow: hidden;
+
+  &__banner {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+
+    &:hover {
+      & img {
+        scale: 1.2;
+        transition: 0.2s ease-in-out;
+      }
+    }
+
+    & img{
+        width: clamp(300px, 35vw, 600px);
+    }
+
+    & h4 {
+      font-family: $sale-font;
+      font-size: 38px;
+      color: $secondary-color;
+      font-weight: 400;
+      margin: 0 0 10px;
+      text-transform: capitalize;
+    }
+
+    & h4,
+    & p {
+      position: absolute;
+      left: 35px;
+      right: 0;
+      text-align: left;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    & p {
+      top: 50%;
+      font-family: $header-font;
+      font-size: 14px;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../global/fonts';
+@import '../../global/mixins';
+@import '../../global/colors';
+
+.ShopBanner{
+    @include flex(row, wrap , center,center);
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+
+}

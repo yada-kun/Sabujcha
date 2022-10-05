@@ -1,0 +1,32 @@
+@import '../../global/fonts';
+@import '../../global/mixins';
+
+
+.Products{
+    background: url('https://live.hasthemes.com/html/2/sabujcha-preview/sabujcha/assets/img/bg/bg-1.jpg');
+    padding:  3% 5%;
+
+    &__content{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    
+
+        & h2{
+            font-family: $sale-font;
+            color: #242424;
+            font-weight: 400;
+            font-size: 38px;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        &--cards{
+            @include flex(row, wrap, center, center);
+            gap: 20px;
+        }
+
+    }
+
+
+}

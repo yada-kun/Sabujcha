@@ -1,0 +1,36 @@
+@import "../../global/mixins";
+@import "../../global/colors";
+
+.Menu {
+  & ul {
+    @include flex(row, nowrap, center, center);
+    list-style: none;
+    gap: 15%;
+
+    & li {
+    }
+
+    & a {
+      text-decoration: none;
+      color: #1b1b1b;
+      padding: 10px 0;
+
+      &:hover {
+        color: #519f10;
+      }
+
+      &:active {
+        border-bottom: 2px solid #519f10;
+      }
+      &:visited{
+        border-bottom: 2px solid #519f10;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 864px) {
+    .Menu{
+        display: none;
+    }
+  }
